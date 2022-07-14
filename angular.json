@@ -75,7 +75,8 @@
               "browserTarget": "csrf:build:production"
             },
             "development": {
-              "browserTarget": "csrf:build:development"
+              "browserTarget": "csrf:build:development",
+              "proxyConfig": "src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
