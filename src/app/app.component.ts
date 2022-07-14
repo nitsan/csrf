@@ -25,4 +25,11 @@ export class AppComponent {
       this.result = res;
     });
   }
+
+  hackFormData(): void {
+    this.httpClient.post('/api//update-form', {name: 'Messi was here!', phone: '10'}).subscribe((res) => {
+      console.log(res);
+      this.result = res;
+    });
+  }
 }
