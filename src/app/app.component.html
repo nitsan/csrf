@@ -9,11 +9,15 @@
       <label for="phone" class="form-label">Phone: </label>
       <input id="phone" class="form-control" type="tel" formControlName="phone">
     </div>
+    <input type="hidden" name="_csrf" formControlName="_csrf">
     <button type="submit" class="btn btn-primary">Submit</button>
     <button type="button" class="btn btn-danger m-2" (click)="hackFormData()">Hack</button>
   </form>
   <div *ngIf="result">
     <h2>Result</h2>
     <pre>{{result | json}}</pre>
+  </div>
+  <div class="alert alert-danger" role="alert" *ngIf="formError">
+    {{formError}}
   </div>
 </div>
