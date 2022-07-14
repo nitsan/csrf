@@ -1,0 +1,14 @@
+<h1 class="mt-4 d-flex justify-content-center">Test Form</h1>
+<div class="d-flex justify-content-center">
+  <form class="m-3 col-6" [formGroup]="testForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="name" class="form-label">Name: </label>
+      <input id="name" class="form-control" type="text" formControlName="name">
+    </div>
+    <div class="mb-3">
+      <label for="phone" class="form-label">Phone: </label>
+      <input id="phone" class="form-control" type="tel" formControlName="phone">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
