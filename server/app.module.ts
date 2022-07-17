@@ -3,7 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ServeStaticModule } from '@nestjs/serve-static';
 import { join } from 'path';
-import { csrfProtection } from "./main";
+import { csrfProtection } from './main';
 
 @Module({
   imports: [
@@ -16,8 +16,6 @@ import { csrfProtection } from "./main";
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
-    consumer
-      .apply(csrfProtection)
-      .forRoutes('/api/*');
+    consumer.apply(csrfProtection).forRoutes('/api/*');
   }
 }

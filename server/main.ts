@@ -8,7 +8,7 @@ export const csrfProtection = csurf({
     secure: true,
     maxAge: 3600,
     httpOnly: true,
-    sameSite: 'strict'
+    sameSite: 'strict',
   },
 });
 
