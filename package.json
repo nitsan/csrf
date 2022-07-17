@@ -12,7 +12,7 @@
     "start:watch": "nodemon express/server.js",
     "build:client": "ng build",
     "build": "nest build",
-    "lint": "eslint \"{src,server}/**/*.ts\"",
+    "lint": "eslint \"{src,server}/**/*.ts\" --fix",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
